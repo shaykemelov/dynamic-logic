@@ -4,5 +4,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public record Source(
         @JsonProperty("code") String code,
-        @JsonProperty("source") String source) {
+        @JsonProperty("source") String source)
+{
 }
