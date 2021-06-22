@@ -33,7 +33,7 @@ public class ScriptsService
         this.scriptSourcesStorageService = scriptSourcesStorageService;
     }
 
-    public Object runScript(final String code, final Object... args)
+    public Object runScript(final String code)
     {
         final var source = scriptSourcesStorageService.getSource(code);
 

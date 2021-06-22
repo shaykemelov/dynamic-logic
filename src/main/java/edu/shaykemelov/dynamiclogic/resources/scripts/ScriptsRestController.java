@@ -20,11 +20,9 @@ public class ScriptsRestController
     }
 
     @GetMapping(value = "/scripts/run/{code}")
-    public ResponseEntity<Object> runScript(@PathVariable(name = "code") final String code,
-                                            @RequestParam(name = "args") final String rowArgs)
+    public ResponseEntity<Object> runScript(@PathVariable(name = "code") final String code)
     {
-        final var args = rowArgs == null || rowArgs.isBlank() ? new Object[]{} : rowArgs.split(";");
-        final var result = scriptsService.runScript(code, args);
+        final var result = scriptsService.runScript(code);
 
         return ResponseEntity.ok(result);
     }
