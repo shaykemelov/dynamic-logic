@@ -33,12 +33,6 @@ curl -X GET --location "http://localhost:8080/module_sources" \
 -H "Content-Type: application/json"
 ```
 
-### Скомпилируем модули
-```bash
-GET http://localhost:8080/modules/reload
-Content-Type: application/json
-```
-
 ### Добавим скрипт, который потом выполним
 ```bash
 curl -X POST --location "http://localhost:8080/script_sources" \
